@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script src="https://threejs.org/build/three.js"></script>
+    <script src="https://cdn.rawgit.com/mrdoob/three.js/master/examples/js/loaders/GLTFLoader.js"></script>
+    
+    <script>
+     const renderer = new THREE.WebGLRenderer({antialias: true});
+    const camera = new THREE.PerspectiveCamera(50, window.innerWidth / window.innerHeight, 1, 1000);
+    const scene = new THREE.Scene();
+    let Mesh;
+    let light;
+
+    function init() {
+        scene.background = new THREE.Color('#e5e5e5');
+        camera.position.set(0, 10, 17);
+        renderer.setSize(window.innerWidth, window.innerHeight);
+        document.body.appendChild(renderer.domElement);
+        window.addEventListener('resize', () => {
+    renderer.setSize(window.innerWidth, window.innerHeight);
+    camera.aspect = window.innerWidth / window.innerHeight;
+    camera.updateProjectionMatrix();
+  })
+    }
+
+    function setLight() {
+        light = new THREE.PointLight(0xffffff, 3); // soft white light
+        light.position.set(0, 10, 20);
+        scene.add(light);
+    }
+
+    function loadGLTF() {
+        let balloonLoader = new THREE.GLTFLoader();
+
+        balloonLoader.load('models/donut3.gltf', (gltf) => {
+            Mesh = gltf.scene;
+            Mesh.scale.set(0.2,0.2,0.2);
+            scene.add(Mesh);
+            Mesh.position.x = 0;
+            Mesh.position.y = 10;
+            Mesh.position.z = 15.5;
+        });
+    }
+
+    function animate() {
+        requestAnimationFrame(animate);
+        
+        Mesh.rotation.set(Mesh.rotation.x + 0.05, 
+                          Mesh.rotation.y,
+                          Mesh.rotation.z + 0.03);
+        renderer.render(scene, camera);
+    }
+
+    init();
+    setLight();
+    loadGLTF();
+    animate();
+    </script>
+</body>
+</html>
