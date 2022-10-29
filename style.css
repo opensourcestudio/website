@@ -49,7 +49,7 @@ html {
     
     
     letter-spacing: .2rem;
-    font-size: 1.3vw;
+    font-size: 25px;
 }
 h1 {
     margin: 1px;
@@ -64,42 +64,89 @@ body {
     margin: 0;
     
 }
+@media screen and (max-width: 1600px) {
+    #navy {
+      display: none !important;
+    }
+    #navbartoggle {
+       display: block !important;
+    }
+  }
+#dropbtn {
+    top: 0 ;
+    right: 10px ;
+    position: absolute;
+    border: 1px solid rgb(116, 156, 221);
+    border-radius: 1px;
+}
+#dropbtn div {
+    width: 35px;
+    height: 5px;
+    background-color: rgb(71, 129, 221);
+    margin: 6px 0;
+    border-radius: 3px;
+}
 #navy {
-    
+    display: block;
     position:absolute;
     top:0;
     right: 0;
 }
-
-ul {
+#navbartoggle {
+    display: none;
+    position:absolute;
+    top:0;
+    right: 10px;
+}
+#navbartoggle ul {
+    
+    margin-top: 55px;
+    overflow: hidden;
+    height: 0px;
+    
+}
+#navy ul, #navbartoggle ul {
     list-style-type: none; 
     
   }
-li {
+#navy ul li {
     display: inline;
-    background-color: #f1f1f1;
     margin: 0px 5px 0px 5px;
+}
+#navbartoggle ul li {
+    
+    margin: 5px;
+}
+#navy ul li, #navbartoggle ul li {
+    
+    background-color: #f1f1f1;
+    
     padding: 10px;
     border: 2px solid black;
     border-radius: 10px;
-    font-size:1.3vw;
+    font-size:20px;
 }
-li a {
+#navy ul li a, #navbartoggle ul li a {
     text-align: center;
     font-weight: bold;
     color: #000;
     
     text-decoration: none;
 }
-li:hover {
+#navy ul li:hover, #navbartoggle  ul li:hover {
     background-color: rgb(116, 156, 221);
     transition: 0.3s;
 }
-#about, #ourTeam, #ourVideos, #ourFAQ{
+
+
+
+
+
+.stuffy {
     
     padding-top: 60px;
 }
-#aboutTitle, #ourTeamTitle, #ourVideosTitle, #ourFAQTitle {
+.stuffytitle {
     font-size: 50px;
     font-weight:bolder;
 }
