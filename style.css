@@ -1,10 +1,17 @@
 html {
     scroll-behavior: smooth;
 }
+
 @font-face {
     font-family: 'Montserrat';
     src: url('fonts/Montserrat-Light.otf');
 }
+@font-face {
+    font-family: 'Rubik';
+    src: url("fonts/Rubik-VariableFont_wght.ttf");
+}
+
+
 
 #mainheading {
     
@@ -12,8 +19,8 @@ html {
     position:fixed;
     height:90px;
     width:99.5%;
-    background-color: rgb(71, 129, 221);
-    border-bottom: 3px solid  rgb(116, 156, 221);
+    background-color: rgba(18,9,62,255); 
+    border-bottom: 3px solid  #8440ae;
 }
 #heading {
     text-align: center;
@@ -59,9 +66,10 @@ h6 {
 }
 
 body {
-    font-family: 'Montserrat';
-    background-color: rgb(178, 198, 231);
+    font-family: 'Rubik';
+    background-color: #8440ae;
     margin: 0;
+    color: white;
     
 }
 @media screen and (max-width: 1600px) {
@@ -76,13 +84,14 @@ body {
     top: 0 ;
     right: 10px ;
     position: absolute;
-    border: 1px solid rgb(116, 156, 221);
+    background-color:#8440ae;
+    border: 1px solid #8440ae;
     border-radius: 1px;
 }
 #dropbtn div {
     width: 35px;
     height: 5px;
-    background-color: rgb(71, 129, 221);
+    background-color: rgba(18,9,62,255);
     margin: 6px 0;
     border-radius: 3px;
 }
@@ -107,7 +116,7 @@ body {
 }
 #navy ul, #navbartoggle ul {
     list-style-type: none; 
-    
+
   }
 #navy ul li {
     display: inline;
@@ -119,7 +128,7 @@ body {
 }
 #navy ul li, #navbartoggle ul li {
     
-    background-color: #f1f1f1;
+    background-color: #8440ae;
     
     padding: 10px;
     border: 2px solid black;
@@ -129,7 +138,7 @@ body {
 #navy ul li a, #navbartoggle ul li a {
     text-align: center;
     font-weight: bold;
-    color: #000;
+    color: white;
     
     text-decoration: none;
 }
@@ -138,15 +147,72 @@ body {
     transition: 0.3s;
 }
 
+#spacer {
+    height: 115px;
+}
 
 
 
-
+.canvas_for_three {
+    overflow-x: hidden;
+}
+.stuffyRealLink {
+    display:block;
+    padding: 60px;
+}
 .stuffy {
-    
-    padding-top: 60px;
+    margin: 0;
+    padding:10px;
 }
 .stuffytitle {
+    margin: 0;
     font-size: 50px;
     font-weight:bolder;
+}
+.spbord {
+    aspect-ratio: 960/100;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    
+}
+.card {
+    font-size: 20px;
+    padding: 5px 15px; 
+    min-height: 300px;
+    min-width: 80vw;
+    border: 2px solid rgba(18,9,62,255);
+    border-radius: 10px;
+    background-color: rgba(18,9,62,255);
+    text-align: center;
+    
+}
+.card p a:link {
+    color: white;
+}
+.card p a:hover {
+    color: rgb(116, 156, 221);
+    transition: 0.3s;
+}
+.layer1 {
+    background-image: url("svgstuff/truefirstborder.svg")
+}
+.layer2 {
+    background-image: url("svgstuff/lighttodark.svg");
+}
+.layer3 {
+    background-image: url("svgstuff/darktolight.svg");
+}
+.sector {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 400px;
+    padding: 100px 20vw;
+    
+}
+.spec {
+    background: #570990;
 }

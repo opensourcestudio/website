@@ -24,7 +24,7 @@ function work() {
         console.log("firstran")
         document.querySelector("#dropbtn").setAttribute("disabled", "")
         
-        document.querySelector("#dropbtn").style.border = "3px solid rgb(116, 156, 221)"
+        document.querySelector("#dropbtn").style.border = "3px solid #8440ae"
     var list_expand = setInterval(() => {
         document.querySelector("#dropdown").style.height = `${height_list}px`
         height_list += 10
@@ -43,7 +43,7 @@ function work() {
         console.log("secondran")
         document.querySelector("#dropbtn").setAttribute("disabled", "")
         
-        document.querySelector("#dropbtn").style.border = "1px solid rgb(116, 156, 221)"
+        document.querySelector("#dropbtn").style.border = "1px solid #8440ae"
         var list_decrease = setInterval(() => {
         document.querySelector("#dropdown").style.height = `${height_list}px`
         height_list -= 10
