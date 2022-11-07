@@ -14,7 +14,7 @@ html {
 
 
 #mainheading {
-    
+    z-index: 1;
     padding: 10px 5px 10px 5px;
     position:fixed;
     height:90px;
@@ -127,7 +127,7 @@ body {
     margin: 5px;
 }
 #navy ul li, #navbartoggle ul li {
-    
+    transition: 0.3s;
     background-color: #8440ae;
     
     padding: 10px;
@@ -142,9 +142,15 @@ body {
     
     text-decoration: none;
 }
+#navbartoggle ul li a p
+{
+    margin: 0;
+    min-width: 120px;
+    
+}
 #navy ul li:hover, #navbartoggle  ul li:hover {
     background-color: rgb(116, 156, 221);
-    transition: 0.3s;
+    
 }
 
 #spacer {
@@ -156,10 +162,10 @@ body {
 .canvas_for_three {
     overflow-x: hidden;
 }
-.stuffyRealLink {
+/* .stuffyRealLink {
     display:block;
     padding: 60px;
-}
+} */
 .stuffy {
     margin: 0;
     padding:10px;
@@ -183,18 +189,95 @@ body {
     min-height: 300px;
     min-width: 80vw;
     border: 2px solid rgba(18,9,62,255);
-    border-radius: 10px;
+    
     background-color: rgba(18,9,62,255);
     text-align: center;
     
 }
+.card p a {
+    transition: 0.3s;
+}
 .card p a:link {
     color: white;
 }
+
 .card p a:hover {
     color: rgb(116, 156, 221);
-    transition: 0.3s;
+    
 }
+
+@media screen and (max-width: 1100px) {
+    .cardSet {
+        flex-direction: column !important;
+        margin: 0 !important;
+    }
+    .photoCard {
+        margin: 10px !important;
+        width: 60vw !important;
+        aspect-ratio: 4/4.3 !important;
+    }
+    .role, .name {
+        font-size:6vw !important;
+    }
+    .bio {
+        font-size: 3vw !important;
+    }
+  }
+
+.cardSet {
+    justify-content: space-evenly;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items:center;
+}
+.photoCard {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    width: 22%;
+    
+    transition: 0.3s;
+    border-radius: 10px;
+    border: 2px solid #12093e;
+    
+    aspect-ratio: 2/2.4;
+    background-color: #12093e;
+}
+.photoCard:hover {
+    
+    box-shadow: -0.5vw 0.5vw #192a49, -1vw 1vw #365d64;
+}
+
+.photoCard img {
+    margin-top: 10px;
+    height: auto;
+    width: 60%;
+}
+.photoCard p {
+    margin:0;
+}
+.name, .role {
+    font-size: 2vw;
+}
+.name {
+    font-weight: bolder;
+}
+.role {
+    opacity: 0.9;
+    font-style: italic;
+}
+.bio {
+    font-size: 1.5vw;
+}
+
+.dflt {
+    min-height: 400px;
+    justify-content: center;
+}
+
 .layer1 {
     background-image: url("svgstuff/truefirstborder.svg")
 }
@@ -209,9 +292,14 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    min-height: 400px;
-    padding: 100px 20vw;
+    width:100%;
     
+}
+.sector p {
+    margin: 10px;
+}
+.sector .cardSet {
+    margin: 10px;
 }
 .spec {
     background: #570990;
