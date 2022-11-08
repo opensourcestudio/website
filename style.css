@@ -255,6 +255,7 @@ body {
     margin-top: 10px;
     height: auto;
     width: 60%;
+    border-radius: 50%;
 }
 .photoCard p {
     margin:0;
