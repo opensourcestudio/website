@@ -187,9 +187,9 @@ body {
     font-size: 20px;
     padding: 5px 15px; 
     min-height: 300px;
-    min-width: 80vw;
+    width: 80vw;
     border: 2px solid rgba(18,9,62,255);
-    
+    border-radius: 15px;
     background-color: rgba(18,9,62,255);
     text-align: center;
     
